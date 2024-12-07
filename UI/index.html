@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="bg-secondary text-center text-white">
+        <h1>
+            Grocery Shop
+        </h1>
+    </header>
+    <div class="row">
+        <div class="col-4 m-auto" style="display: none;" id="addStyleUnit">
+            <div class="cards">
+                <div class="card-header bg-secondary text-white text-center">
+                    <h3>Add New Products</h3>
+                </div>
+
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="product-name">Product Name</label>
+                            <input type="text" placeholder="product name" class="text-center" id="productName">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="unit">Unit</label>
+                            <select id="unit" class="text-center"></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" placeholder="price" class="text-center" id="priceName">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" id="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7 m-auto">
+            <div class="cards">
+                <div class="card-header bg-primary text-center d-flex justify-content-between">
+                    <h2>Product List</h2>
+                    <button class="float-end" id="addButton">
+                        Add new Product
+                    </button>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id = "setProductDisplay"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./function.js"></script>
+</body>
+</html>

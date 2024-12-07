@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS units(
+    unit_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    unit_name VARCHAR(100) NOT NULL
+);
+
+INSERT INTO units(unit_name)
+VALUES('piece');
+
+COMMIT;
+
+SELECT * FROM units;
