@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS units(
 
 CREATE TABLE IF NOT EXISTS products(
     product_id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    product_name VARCHAR(100) NOT NULL,
+    product_name VARCHAR(100) NOT NULL UNIQUE,
     unit_id INTEGER REFERENCES units(unit_id),
     product_price FLOAT NOT NULL
 );
